@@ -1,0 +1,129 @@
+// displays
+.hide,
+.hidden,
+.d-none
+  display: none
+.block,
+.d-block
+  display: block
+.inline,
+.d-inline
+  display: inline
+.inline-block,
+.d-inline-block
+  display: inline-block
+.flex,
+.d-flex
+  +prefix(display, flex)
+
+// Aligns
+
+.align-left
+  text-align: left
+.align-center
+  text-align: center
+.align-right
+  text-align: right
+.align-justify
+  text-align: justify
+
+// Margins And Paddings
+
+.m-reset
+  margin-top: 0
+  margin-right: 0
+  margin-bottom: 0
+  margin-left: 0
+
+.p-reset
+  padding-top: 0
+  padding-right: 0
+  padding-bottom: 0
+  padding-left: 0
+
+.m-0
+  margin: 0
+
+.p-0
+  padding: 0
+
+.of-hidden
+  overflow: hidden
+
+.of-visible
+  overflow: visible
+
+.of-auto
+  overflow: auto
+
+
+
+@each $base-measurement in $base-measurements
+  $key: nth($base-measurement, 1)
+  $value: nth($base-measurement, 2)
+
+
+  @for $i from 1 through 3
+    $value_base: 1
+    $root_class: '.m-'+$key+'.m-'
+    @if $key == 'px' or $key == 'percent'
+      $value_base: 10
+    @if $key == 'px'
+      $root_class: '.m-'
+
+    $value_iterate: ($value_base*$i)
+    #{$root_class}#{$value_iterate}
+      margin: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-y
+      margin-top: #{$value_iterate}#{$value}
+      margin-bottom: #{$value_iterate}#{$value}
+    #{$root_class}#{$value_iterate}-x
+
+      margin-left: #{$value_iterate}#{$value}
+      margin-right: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-left
+      margin-left: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-right
+      margin-right: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-top
+      margin-top: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-bottom
+      margin-bottom: #{$value_iterate}#{$value}
+
+  @for $i from 1 through 3
+    $value_base: 1
+    $root_class: '.p-'+$key+'.p-'
+    @if $key == 'px' or $key ==  'percent'
+      $value_base: 10
+    @if $key == 'px'
+      $root_class: '.p-'
+
+    $value_iterate: ($value_base*$i)
+    #{$root_class}#{$value_iterate}
+      padding: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-y
+      padding-top: #{$value_iterate}#{$value}
+      padding-bottom: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-x
+      padding-left: #{$value_iterate}#{$value}
+      padding-right: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-left
+      padding-left: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-right
+      padding-right: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-top
+      padding-top: #{$value_iterate}#{$value}
+
+    #{$root_class}#{$value_iterate}-bottom
+      padding-bottom: #{$value_iterate}#{$value}
+

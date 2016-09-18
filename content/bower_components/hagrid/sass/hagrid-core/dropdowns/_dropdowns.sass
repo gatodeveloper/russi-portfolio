@@ -1,0 +1,72 @@
+.dropdown
+  +inline-block
+  margin: 0 .5em 
+
+  .btn
+    width: 100%
+    text-align: left
+
+  .btn-dropdown
+    padding-right: 3em!important
+    border-width: $dropdown-outline__bdw
+    margin: 0
+
+    .icon-dropdown
+      +inline-block
+      width: 2.5em
+      height: 100%
+      position: absolute
+      //border-left: 1px solid rgba(0, 0, 0, .1)
+      margin-left: .5em
+      top: 50%
+      right: -15px
+
+  &.support-hover
+    .btn-dropdown
+      &:hover + .dropdown-menu
+        display: block
+
+  &.open,
+  &.active
+    .dropdown-menu
+      display: block
+
+  .dropdown-menu
+    +border-box
+    display: none
+    position: absolute
+    z-index: 1
+    background: $dropdown-menu__bgc
+    width: 100%
+    box-shadow: $dropdown-menu__bxsh
+    top: 100%
+    padding: 0
+    margin: 5px 0 0
+    list-style: none
+    min-width: 140px
+    border-radius: 5px
+
+    li
+      display: block
+
+      a
+        padding: $dropdown-menu_item-padding
+        display: block
+        text-decoration: none
+        color: inherit
+
+        &:hover
+          background-color: $dropdown-menu_item-hover
+
+  &.dropdown-outline
+    .btn-dropdown
+      border-width: $dropdown-outline__bdw
+
+    .dropdown-menu
+      @extend .primary-color
+      box-shadow: none
+      border-radius: 0
+      border: solid 1px $color-primary
+
+
+

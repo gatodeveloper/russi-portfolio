@@ -1,0 +1,70 @@
+/* Import Normalize */
+@import "normalize"
+
+body
+  font-family: $font-primary
+  color: $body-color
+  font-size: $body-font-size
+  +prefix(font-smoothing, antialiased)
+
+*,
+*:before,
+*:after
+  +border-box
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+div
+  position: relative
+
+
+
+
+// Colors
+.color
+  padding: .5em 0
+  text-align: center
+  width: 25%
+  color: #fff
+  +inline-block
+
+@each $color in $colors
+  $key: nth($color, 1)
+  $value: nth($color, 2)
+  .#{$key}-color
+    color: #{$value}
+  .#{$key}-bgc
+    background-color: #{$value}
+
+@each $base-color in $base-colors
+  $key: nth($base-color, 1)
+  $value: nth($base-color, 2)
+  .#{$key}-look
+    background-color: #{$value}
+    @if $key == default
+      color: #333
+    @else
+      color: #fff
+  .#{$key}-color,
+    color: #{$value}
+  .#{$key}-bgc,
+  .#{$key},
+    background-color: #{$value}
+    &.#{$key}-darken
+      background-color: darken($value, $init-percent-darken)
+    &.#{$key}-lighten
+      background-color: lighten($value, $init-percent-darken)
+
+  .#{$key}-color-code
+    &:before
+      content: '#{$value}'
+
