@@ -1,0 +1,29 @@
+{
+  "name": "hagrid",
+  "homepage": "https://github.com/rokk3rlabs/hagrid",
+  "authors": [
+    "Diego Santiesteban <gatodeveloper@gmail.com>"
+  ],
+  "description": "Hagrid Framework",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "_release": "457d4caab0",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "457d4caab07e24723e36e4f9abd1597d2604aeb1"
+  },
+  "_source": "https://github.com/rokk3rlabs/hagrid.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/rokk3rlabs/hagrid.git",
+  "_direct": true
+}

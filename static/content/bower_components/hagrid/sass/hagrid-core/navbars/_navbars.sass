@@ -1,0 +1,46 @@
+// navbar
+.navbar
+  //color: #333
+  z-index: 1
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5)
+
+  &.navbar-fixed
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+
+  a,
+  .navbar-text,
+  .navbar-link,
+  .navbar-button
+    +inline-block
+    text-decoration: none
+    padding: 1em
+    font-size: 1em
+    color: inherit
+
+  a,
+  .navbar-link,
+    &:not(.no-link)
+      &:hover
+        background-color: rgba(0, 0, 0, .2)
+
+  .navbar-brand
+    font-size: 1.4em
+    line-height: 0
+    padding: 1em
+    height: 100%
+
+    small
+      font-size: .6em
+      padding: .5em
+      line-height: 0
+
+    &:hover
+      background: inherit
+      color: inherit
+
+  &.navbar-primary
+    background: #2D6CC9
+    color: #fff

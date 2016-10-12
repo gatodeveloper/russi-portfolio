@@ -1,4 +1,45 @@
 body
+  font-family: 'Gotham-Light', helvetica, arial, sans-serif
+  //background: url(../img/photo640877703057222347.jpg) no-repeat center top
+  //color: #404040
+  color: #000
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: 'Gotham-Medium', helvetica, arial, sans-serif
+  color: #333
+
+h1
+  font-size: 2rem
+h2
+  font-size: 1.7rem
+h3
+  font-size: 1.4rem
+h4
+  font-size: 1.3rem
+h5
+  font-size: 1.2rem
+h6
+  font-size: 1.1rem
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea
+  background: #ebebeb
+  border: 1px solid #acacac
+  padding: .25em .5em
+
+.btn
+  background: #1bb99b
+  color: #fff
+  border: none
+
+
  
 figure.avatar
   padding: 0
@@ -10,3 +51,18 @@ figure.avatar
   margin: auto
   padding: 0 1em
 
+.main-wrap
+  max-width: 800px
+  margin: auto
+
+.shadow-separator
+  padding: 1em  0
+  &:before
+    content: ''
+    position: absolute
+    top: -10px
+    left: 0
+    height: 10px
+    width: 100%
+    overflow: hidden
+    box-shadow: 0 2px 2px 0 #d2d2d2

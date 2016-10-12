@@ -1,0 +1,129 @@
+.btn
+  @extend .default-color
+  +inline-block
+  padding: $btn-padding
+  line-height: 1em
+  color: nth(nth($base-colors, 2), 2)
+  background-color: nth(nth($base-colors, 1), 2)
+  text-decoration: none
+  font-size: $btn-font-size
+  font-weight: $btn-font-weight
+  margin: .25em
+  border-radius: $border-radius
+  text-transform: $btn-text-transform
+  position: relative
+  text-align: center
+  border: 1px solid rgba(0, 0, 0, .05)
+  cursor: pointer
+  +prefix(text-shadow, 0 0 1px rgba(0,0,0,.01))
+  +prefix(font-smoothing, antialiased)
+  +prefix(transition, background .2s)
+  +border-box
+  &:hover,
+  &.btn-hover
+    background-color: darken(nth(nth($base-colors, 1), 2), 5%)
+
+  &.btn-disable
+    background-color: #dfdfe2
+
+  &[class*="btn-"]
+    color: #fff
+
+  // Color Buttons
+  @each $base-color in $base-colors
+    $key: nth($base-color, 1)
+    $value: nth($base-color, 2)
+    &.btn-#{$key}
+      background-color: #{$value}
+      @if $key == default
+        color: nth(nth($base-colors, 2), 2)
+        .badge
+          background: nth(nth($base-colors, 2), 2)
+
+      .badge
+        color: $value
+
+      &:hover,
+      &.btn-hover
+        background-color: darken($value, $init-percent-darken)
+      &:active,
+      &.btn-active,
+        background-color: lighten($value, $init-percent-darken)
+      &.btn-disable
+        background-color: #dfdfe2
+        cursor: not-allowed
+
+
+
+  // Size Buttons
+  @for $i from 1 to length($base-sizes)+1
+    $key: nth($base-sizes, $i)
+    &.btn-#{$key}
+      font-size: .4+($btn-increment-size*$i)+$btn-measure-size
+
+  // Flat Buttons
+  &.btn-flat
+    border-radius: 0
+    border: 1px solid rgba(0, 0, 0, .01)
+
+  // Flat Buttons
+  &.btn-shadow
+    border: 1px solid rgba(255, 255, 255, .8)
+    border-radius: 2px
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .1)
+
+  // Upper Button
+  &.btn-upper
+    +prefix(border-radius, $border-radius)
+    //box-shadow: 0 -4px 0 0 rgba(0, 0, 0, .2) inset
+    border-bottom: 4px solid rgba(0, 0, 0, .2)
+
+  // Block
+  &.btn-block,
+  &.btn-full-width
+    display: block
+    width: 100%
+
+  // Outline Button
+  &.btn-outline
+    padding-right: 2em
+    padding-left: 2em
+    background: transparent
+    border-radius: $btn-outline-border-radius //100px
+    border-width: $btn-outline-border-width //3px
+    border-style: solid
+
+    @each $base-color in $base-colors
+      $key: nth($base-color, 1)
+      $value: nth($base-color, 2)
+      &.btn-#{$key}
+        border-color: #{$value}
+        @if $key == default
+          color: #333
+        @else
+          color: #{$value}
+        @if $btn-outline-hover-bkg == true
+          &:hover,
+          &.btn-hover
+            @if $key == default
+              color: #333
+            @else
+              color: #fff
+            background-color: $value
+        @else
+          &:hover,
+          &.btn-hover
+            color: darken($value, $init-percent-darken)
+            border-color: darken($value, $init-percent-darken)
+            background-color: transparent
+          &:active,
+          &.btn-active
+            color: lighten($value, $init-percent-darken)
+            border-color: lighten($value, $init-percent-darken)
+            background-color: transparent
+          &.btn-disable
+            color: #dfdfe2
+            border-color: #dfdfe2
+            background-color: transparent
+
+
