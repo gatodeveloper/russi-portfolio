@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .icons-sprite, .main-header a.logo {
-  background-image: url('../img/icons-scea5ae9b18.png');
+  background-image: url('../img/icons-sd680c751e9.png');
   background-repeat: no-repeat;
 }
 
@@ -105,9 +105,11 @@ textarea {
   background: #ebebeb;
   border: 1px solid #acacac;
   padding: 0.25em 0.5em;
+  width: 100%;
+  resize: none;
 }
 
-.btn {
+.btn-x {
   background: #1bb99b;
   color: #fff;
   border: none;
@@ -230,7 +232,7 @@ a img.aligncenter {
 
 .main-header a.logo {
   display: block;
-  background-position: 0 0;
+  background-position: 0 -50px;
   width: 168px;
   height: 92px;
 }
@@ -289,4 +291,11 @@ footer.main-footer nav.social-networks a {
 
 .post-entry a {
   color: inherit;
+}
+
+form.wpcf7-form {
+  padding-bottom: 4em;
+}
+form.wpcf7-form .wpcf7-form-control.wpcf7-submit {
+  margin: 0;
 }
