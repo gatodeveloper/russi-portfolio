@@ -9,7 +9,7 @@
   <div class="main-wrap">
     <b><?php echo get_field('top_section'); ?></b>
     <?php if (have_posts()): the_post();?>
-    <div class="gs">
+    <div class="gs gutters sticky-sides">
       <div class="layout-70">
           <?php the_content();?>
       </div>

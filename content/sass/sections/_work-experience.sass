@@ -1,0 +1,39 @@
+.slider-works-section
+  .bx-wrapper
+    box-shadow: none
+    margin: 0
+
+    .bx-controls
+      &.bx-has-controls-direction
+        width: 100%
+        position: absolute
+        top: 55%
+
+    .bx-prev,
+    .bx-prev:hover
+      +icons-sprite(arrow-left)
+      width: +icons-sprite-width(arrow-left)
+      height: +icons-sprite-height(arrow-left)
+      left: -60px
+    .bx-next,
+    .bx-next:hover,
+      +icons-sprite(arrow-right)
+      width: +icons-sprite-width(arrow-right)
+      height: +icons-sprite-height(arrow-right)
+      right: -60px
+
+    .bx-prev,
+    .bx-next
+      &:hover
+        opacity: .8
+
+
+.slider-works
+  li
+    .work-title
+      padding-bottom: 0
+
+    .work-date
+      display: block
+    p
+      text-align: justify

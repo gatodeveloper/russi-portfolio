@@ -1,4 +1,6 @@
 <?php
+  include(TEMPLATEPATH .'/core/taxonomies.php');
+  
   add_action( 'init', 'register_my_menus' );
 
   function register_my_menus() {

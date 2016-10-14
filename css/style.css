@@ -1,5 +1,7 @@
 @charset "UTF-8";
-.icons-sprite, .main-header a.logo {
+.icons-sprite, .main-header a.logo, .slider-works-section .bx-wrapper .bx-prev,
+.slider-works-section .bx-wrapper .bx-prev:hover, .slider-works-section .bx-wrapper .bx-next,
+.slider-works-section .bx-wrapper .bx-next:hover {
   background-image: url('../img/icons-sd680c751e9.png');
   background-repeat: no-repeat;
 }
@@ -298,4 +300,42 @@ form.wpcf7-form {
 }
 form.wpcf7-form .wpcf7-form-control.wpcf7-submit {
   margin: 0;
+}
+
+.slider-works-section .bx-wrapper {
+  box-shadow: none;
+  margin: 0;
+}
+.slider-works-section .bx-wrapper .bx-controls.bx-has-controls-direction {
+  width: 100%;
+  position: absolute;
+  top: 55%;
+}
+.slider-works-section .bx-wrapper .bx-prev,
+.slider-works-section .bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+  width: 20px;
+  height: 25px;
+  left: -60px;
+}
+.slider-works-section .bx-wrapper .bx-next,
+.slider-works-section .bx-wrapper .bx-next:hover {
+  background-position: 0 -25px;
+  width: 20px;
+  height: 25px;
+  right: -60px;
+}
+.slider-works-section .bx-wrapper .bx-prev:hover,
+.slider-works-section .bx-wrapper .bx-next:hover {
+  opacity: 0.8;
+}
+
+.slider-works li .work-title {
+  padding-bottom: 0;
+}
+.slider-works li .work-date {
+  display: block;
+}
+.slider-works li p {
+  text-align: justify;
 }
