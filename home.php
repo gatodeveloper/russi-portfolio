@@ -10,10 +10,10 @@
     <b><?php echo get_field('top_section'); ?></b>
     <?php if (have_posts()): the_post();?>
     <div class="gs gutters sticky-sides">
-      <div class="layout-70">
+      <div class="layout-70 layout-sm-100 layout-xs-100">
           <?php the_content();?>
       </div>
-      <div class="layout-30">
+      <div class="layout-30 hide-xs hide-sm">
         <figure class="avatar">
           <?php echo get_the_post_thumbnail(get_the_ID(), 'full');?>
         </figure>

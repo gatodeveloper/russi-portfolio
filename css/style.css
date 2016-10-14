@@ -121,6 +121,10 @@ figure.avatar {
   padding: 0;
   margin: 0;
 }
+figure.avatar img {
+  max-width: 100%;
+  height: auto;
+}
 
 .grid-wrap {
   max-width: 1200px;
@@ -132,6 +136,7 @@ figure.avatar {
 .main-wrap {
   max-width: 800px;
   margin: auto;
+  padding: 0 1em;
 }
 
 .shadow-separator {
@@ -255,6 +260,11 @@ a img.aligncenter {
   padding: 2.3em 2.3em 2.2em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 850px) {
+  .main-header nav {
+    display: none;
+  }
+}
 
 .hero-banner {
   background: url(../img/hero-banner.jpg);
@@ -268,6 +278,14 @@ a img.aligncenter {
   font-size: 2.8em;
   letter-spacing: -0.1em;
   color: #fff;
+}
+@media screen and (max-width: 400px) {
+  .hero-banner {
+    padding: 1em;
+  }
+  .hero-banner h1 {
+    font-size: 2em;
+  }
 }
 
 footer.main-footer {
@@ -284,6 +302,15 @@ footer.main-footer nav.social-networks a {
   line-height: 40px;
   font-size: 1.3em;
   margin: 1.3em 0.7em;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+footer.main-footer nav.social-networks a:hover {
+  background-color: #1bb99b;
 }
 
 .main-content {
@@ -298,10 +325,22 @@ footer.main-footer nav.social-networks a {
 form.wpcf7-form {
   padding-bottom: 4em;
 }
+@media screen and (max-width: 700px) {
+  form.wpcf7-form .gs .layout-50 {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+  }
+}
 form.wpcf7-form .wpcf7-form-control.wpcf7-submit {
   margin: 0;
 }
 
+@media screen and (max-width: 900px) {
+  .slider-works-section {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
 .slider-works-section .bx-wrapper {
   box-shadow: none;
   margin: 0;
